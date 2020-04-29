@@ -1,0 +1,13 @@
+<h1>Longest Word Challenge</h1>
+<div class="letters-grid">
+  <% @letters.each do |letter| %>
+    <div class="letter"><%= letter.upcase %></div>
+  <% end %>
+</div>
+
+<%= simple_form_for @player_guess, url: score_path, method: :post, html: { class: "user-input" } do |f| %>
+  <%= f.input :word, label: false, placeholder: "Your guess...", input_html: { style: 'width: 200px' } %>
+  <%= f.submit 'Play', class: 'btn btn-info w-100' %>
+  <%= hidden_field_tag 'grid', @letters %>
+  <%= hidden_field_tag 'start_time', Time.now %>
+<% end %>

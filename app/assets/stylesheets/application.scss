@@ -1,0 +1,21 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+@import "games";
+
+@import url('https://fonts.googleapis.com/css?family=Domine:400,700|Roboto:300,400&display=swap');
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Domine', serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p {
+  font-weight: 300;
+}
